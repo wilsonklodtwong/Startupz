@@ -1,0 +1,67 @@
+.try {
+    background-image: url('../assets/g_Bacground (1).png');
+    background-size: cover;
+    width: 100%;
+    height: 480px;
+    @include respond-to(large) {
+    	height: 450px;
+    }
+    @include respond-to(small) {
+    	height: 350px;
+    }
+}
+.riskFree {
+	display: flex;
+	flex-direction: column;
+	align-item: center;
+	justify-content: space-around;
+}
+.try__text {
+	text-align: center;
+	color: white;
+}
+.try__title {
+	font-weight: 300;
+}
+.try__blurb {
+	font-size: 20px;
+	text-align: center;
+	font-weight: 300;
+	padding-bottom: 30px;
+	@include respond-to(small) {
+		font-size: 14px;
+		width: 300px;
+		margin: 0 auto;
+	}
+}
+.try__logo {
+	margin: 82px auto;
+	width: 130px;
+	height: 130px;
+	background-color: #0E9AE1;
+	border-radius: 50%;
+	position: relative;
+	@include respond-to(large) {
+    	margin: 40px auto;
+    	width: 100px;
+    	height: 100px;
+    }
+	@include respond-to(small) {
+    	margin: 20px auto;
+    	width: 70px;
+    	height: 70px;
+    }
+
+}
+.try img {
+	display: block;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	width: 78px;
+	margin: 0 auto;
+	@include respond-to(small) {
+    	width: 39px;
+    }
+}

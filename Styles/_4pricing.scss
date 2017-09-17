@@ -1,0 +1,167 @@
+#pricing {
+	width: 100%;
+	background-color: #f8f8f8
+}
+
+.pricing--intro h2 {
+	padding-top: 74px;
+	padding-bottom: 15px;
+	color: $textBlue;
+	margin: 0 auto;
+	text-align: center;
+	@include respond-to(small) {
+		padding-top: 35px;
+	}
+}
+.pricing--intro p {
+	color: $textLtGrey;
+	margin: 0 auto;
+	width: 475px;
+	text-align: center;
+	@include respond-to(small) {
+		width: 320px;
+		margin: 0 auto;
+		font-size: 13px;
+	}
+}
+.pricing__ul {
+	padding: 20px 0;
+	margin: 0;
+	display: flex;
+	justify-content: flex-end;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: $textHover;
+	position: relative;
+	@include respond-to(small) {
+		justify-content: center;
+	}
+
+}
+.pricing__ul--active {
+	color: $textLtGrey;
+}
+.pricing__ul li {
+	text-align: right;
+	padding-right: 40px;
+}
+.pricing__ul li:nth-child(3) {
+	padding-right: 0;
+}
+.pricing__ul--active::before {
+	color: $textHover;
+	top: 22px;
+	content: ".";
+	font-size: 14px;
+	right: 110px;
+	position: absolute;
+	@include respond-to(small) {
+		right: 230px;
+	}
+}
+.pricing__ul--active::after {
+	color: $textHover;
+	top: 22px;
+	content: ".";
+	font-size: 14px;
+	right: 45px;
+	position: absolute;
+	@include respond-to(small) {
+		right: 165px;
+	}
+}
+.option {
+	display: flex;
+	padding-bottom: 60px;
+	@include respond-to(medium) {
+		flex-direction: column;
+	}
+}
+.small, .medium, .large {
+	width: calc(33% - 20px);
+	height: 450px;
+	border: 1px solid #d8d7d7;
+	border-radius: 12px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	position: relative;
+	@include respond-to(medium) {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+.option__title {
+	text-transform: uppercase;
+	color: #4F504F;
+	padding: 20px 0;
+	text-align: center;
+	@include respond-to(medium) {
+		font-size: 20px;
+	}
+}
+.option i {
+	font-size: 30px;
+	@include respond-to(medium) {
+		font-size: 15px;
+	}
+}
+.option__cost {
+	text-align: center;
+	color: #14abf4;
+	font-size: 60px;
+	@include respond-to(medium) {
+		grid-area: cost;
+		font-size: 30px;
+	}
+}
+.option span {
+	color: $textLtGrey;
+	font-size: 17px;
+}
+.option p {
+	color: $textLtGrey;
+	text-align: center;
+}
+.text {
+	padding: 20px 0;
+	background-color: #DCECFE;
+}
+.blurb {
+	padding: 30px 0 40px;
+	@include respond-to(medium) {
+		padding: 15px 0 20px;
+	}
+}
+
+.triangleCorner {
+	width: 0; 
+	height: 0; 
+	border-left: 85px solid transparent;
+	border-top: 85px solid #14abf4;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.medium {
+	overflow: hidden;
+	@include respond-to(medium) {
+		margin: 20px auto;
+	}
+}
+
+.price__medium--active {
+	text-transform: uppercase;
+	margin: 0;
+	position: absolute;
+	top: 17px;
+	right: -2px;
+	transform: rotate(45deg);
+}
+.medium p.price__medium--active {
+	color: white;
+}
+.text--active {
+	background-color: rgba(20, 171, 244, 0.2)
+}

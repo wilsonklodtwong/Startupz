@@ -1,0 +1,103 @@
+// body {
+// 	overflow: hidden;
+// }
+a {
+	text-decoration: none;
+}
+ul {
+	list-style-type: none;
+}
+.wrapper {
+	max-width: 940px;
+	margin: 0 auto;
+	@include respond-to(large) {
+		max-width: 840px;
+	}
+	@include respond-to(medium) {
+		max-width: 768px;
+	}
+	@include respond-to(small) {
+		max-width: 480px;
+	}
+}
+.arrowUp {
+	background-color: #f8f8f8;
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 13px solid #26B1FF;
+	position: relative;
+	left: 19%;
+	@include respond-to(medium) {
+		visibility: hidden;
+	}
+}
+form {
+	display: flex;
+	justify-content: space-between;
+	width: 840px;
+	margin: 0 auto;
+	@include respond-to(large) {
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
+	@include respond-to(small) {
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
+}
+.form {
+	background-color: transparent;
+	border: 2px solid white;
+	border-radius: 8px;
+	font-size: 13px;
+	padding-left: 20px;
+	font-weight: 300;
+	@include respond-to(large) {
+		padding-left: 10px;
+		line-height: 25px;
+	}
+	@include respond-to(medium) {
+		padding-left: 10px;
+		line-height: 25px;
+	}
+	@include respond-to(small) {
+		line-height: 25px;
+	}
+}
+.myPassword {
+	width: 190px;
+	@include respond-to(large) {
+		width: 300px;
+		margin: 5px;
+	}
+	@include respond-to(medium) {
+		width: 300px;
+		margin: 5px;
+	}
+	@include respond-to(small) {
+		width: 300px;
+		margin: 5px;
+	}
+}
+.myEmail {
+	width: 350px;
+	@include respond-to(large) {
+		width: 300px;
+		margin: 15px;
+	}
+	@include respond-to(medium) {
+		width: 300px;
+		margin: 10px;
+	}
+	@include respond-to(small) {
+		width: 300px;
+		margin: 5px;
+	}
+}
+input::placeholder {
+  color: #fff;
+}

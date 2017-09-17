@@ -1,0 +1,132 @@
+.top {
+    background-image:
+        linear-gradient(0deg, rgba(135,133,255,.9) 5%, rgba(51,180,255,.9) 100%), 
+        url('../assets/a_hero.png');
+    background-size: cover;
+    height: 100vh;
+    @include respond-to(large) {
+		height: 500px;
+	}
+	@include respond-to(medium) {
+		height: 400px;
+	}
+	@include respond-to(small) {
+		height: 300px;
+	}
+}
+.header__nav {
+	display: flex;
+	flex-direction:row;
+	flex: 0 1 auto;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+	width: 100%;
+	border-bottom: 1px solid $textBlue;
+	@include respond-to(large) {
+		display: grid;
+		grid-template-areas: 
+	    "logo button" 
+	    "nav nav" ;
+	    justify-content: space-evenly;
+	}
+	@include respond-to(medium) {
+		display: grid;
+		grid-template-areas: 
+	    "logo button" 
+	    "nav nav" ;
+	    justify-content: space-evenly;
+	}
+	@include respond-to(small) {
+		display: grid;
+		grid-template-areas: 
+	    "logo button" 
+	    "nav nav" ;
+	    justify-content: space-evenly;
+	}
+}
+.nav__img {
+	width: 100px;
+	@include respond-to(small) {
+		grid-area: logo;
+	}
+}
+.header__nav--ul {
+	flex-grow: 1;
+	justify-content: flex-end;
+	@include respond-to(small) {
+		justify-content: space-between;
+		grid-area: nav; 
+		margin: 0;
+		padding-bottom: 5px;
+	}
+}
+.header__nav--button {
+	@include respond-to(small) {
+		grid-area: button;
+		justify-content:space-between;
+	}
+}
+
+.header__nav--ul, .header__nav--button {
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.header__nav--ul a {
+	font-size: 13px;
+	color: white;
+	display: flex;
+	flex: 0 1 auto;
+	justify-content: space-between;
+}
+.header__nav--button li {
+	padding: 0 10px;
+	@include respond-to(large) {
+		padding: 0;
+	}
+}
+.header__nav--ul li {
+	padding: 0 20px;
+	@include respond-to(small) {
+		padding: 0 5px;
+	}
+}
+.header__nav--ul li:nth-child(6) {
+	padding-right: 0px;
+}
+.header__nav--ul li:nth-child(7) {
+	padding-right: 0px;
+}
+.nav__button--sign {
+	color: $textBlue;
+	background: white;
+}
+.top h1 {
+	padding-top: 200px;
+	color: white;
+	text-align: center;
+	@include respond-to(large) {
+		padding-top: 100px;
+	}
+	@include respond-to(small) {
+		padding-top: 30px;
+	}
+}
+.top p {
+	margin: 0 auto;
+	color: white;
+	text-align: center;
+	font-size: 22px;
+	line-height: 32px;
+	@include respond-to(medium) {
+		font-size: 20px;
+		line-height: 25px;
+	}
+	@include respond-to(small) {
+		width: 300px;
+		font-size: 14px;
+		line-height: 25px;
+	}
+}

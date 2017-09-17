@@ -1,0 +1,105 @@
+#about {
+	width: 100%;
+	background-color: #f8f8f8;
+}
+#about h2 {
+	padding: 60px 0 27px;
+	color: $textBlue;
+	text-align: center;
+	line-height: 22px;
+	@include respond-to(small) {
+		padding-top: 30px;
+	}
+}
+#about p {
+	color: $textLtGrey;
+	@include respond-to(small) {
+		max-width: 300px;
+		font-size: 14px;
+	}
+}
+.about__info {
+	margin: 0 auto;
+	text-align: center;
+	width: 400px;
+}
+#features {
+	width: 100%;
+	padding: 60px 0 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	@include respond-to(small) {
+		display: grid;
+		grid-template-areas: 
+	    "support coding layer" 
+	    "search filter share" ;
+	    justify-content: space-evenly;
+	    padding: 30px 0;
+	}
+}
+.support {
+	position: relative;
+	margin: 0 auto;
+	@include respond-to(small) {
+		grid-area: support;
+	}
+}
+.coding {
+	@include respond-to(small) {
+		grid-area: coding;
+	}
+}
+.layer {
+	@include respond-to(small) {
+		grid-area: layer;
+	}
+}
+.search {
+	@include respond-to(small) {
+		grid-area: search;
+		padding-top: 10px;
+	}
+}
+.filter {
+	@include respond-to(small) {
+		grid-area: filter;
+		padding-top: 10px;
+	}
+}
+.share {
+	@include respond-to(small) {
+		grid-area: share;
+		padding-top: 10px;
+	}
+}
+
+.support::after {
+	background-color: #4DA4FC;
+	bottom: -3px;
+	content: "";
+	height: 2px;
+	left: 50%;
+	position: absolute;
+	transform: translateX(-50%);
+	width: 60px;
+	@include respond-to(small) {
+		visibility: hidden;
+	}
+}
+
+.coding, .layer, .search, .filter, .share {
+	margin: 0 auto;
+	opacity: .3;
+}
+#features a {
+	display: flex;
+	flex-direction: column;
+}
+#features img {
+	margin: 0 auto;
+}
+#features p {
+	text-transform: uppercase;
+	text-align: center
+}

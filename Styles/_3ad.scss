@@ -1,0 +1,58 @@
+.ad {
+    background-image:
+        linear-gradient(0deg, rgb(135,133,255) 5%, rgb(51,180,255) 100%);
+    background-size: cover;
+    width: 100%;
+    height: 671px;
+    display: flex;
+    @include respond-to(small) {
+    	display: inline-block;
+    	height: 450px;
+    }
+}
+.adText {
+	width: 525px;
+	padding-left: 28%;
+	padding-top: 115px;
+	@include respond-to(small) {
+		width: 300px;
+		display: flex;
+		flex-direction: column;
+		padding: 0;
+		padding-top: 25px;
+		align-items: center;
+		margin: 0 auto;
+	}
+}
+.adText h3 {
+	margin-top: 0;
+}
+.adText h3,
+.adText p {
+	color: white;
+	text-align: left;
+	@include respond-to(small) {
+		text-align: center;
+		width: 320px;
+	}
+}
+.adText p {
+	padding: 40px 0;
+	@include respond-to(small) {
+		width: 310px;
+		line-height: 20px;
+	}
+}
+.ad__button {
+	padding: 5px 15px;
+	@include respond-to(small) {
+		
+	}
+}
+.laptop {
+	padding-top: 69px;
+	overflow: hidden;
+	@include respond-to(small) {
+		display: none;
+	}
+}
